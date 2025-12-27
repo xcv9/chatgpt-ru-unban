@@ -5,42 +5,77 @@
 <title>ChatGPT RU Unban</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <style>
+@keyframes floatBg {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
 body {
   margin:0;
   font-family: system-ui, -apple-system, BlinkMacSystemFont;
-  background: radial-gradient(circle at top, #5b1e2d, #020617);
+  background: linear-gradient(120deg, #3b1220, #020617, #2a0f18);
+  background-size: 300% 300%;
+  animation: floatBg 30s ease infinite;
   color:#f5f3f4;
   display:flex;
   justify-content:center;
   align-items:center;
   height:100vh;
 }
+
 .card {
   background: rgba(2, 6, 23, 0.88);
-  padding:38px;
-  border-radius:22px;
-  max-width:560px;
-  box-shadow:0 25px 60px rgba(0,0,0,.6);
+  padding:42px;
+  border-radius:26px;
+  max-width:600px;
   text-align:center;
+  box-shadow:
+    0 30px 80px rgba(0,0,0,.6),
+    0 0 40px rgba(220,38,38,.15);
   border:1px solid rgba(220,38,38,.25);
+  transition: transform .4s ease, box-shadow .4s ease;
 }
+
+.card:hover {
+  transform: translateY(-6px) scale(1.01);
+  box-shadow:
+    0 40px 100px rgba(0,0,0,.75),
+    0 0 60px rgba(220,38,38,.25);
+}
+
+.badge {
+  display:inline-block;
+  padding:6px 14px;
+  font-size:12px;
+  letter-spacing:.08em;
+  text-transform:uppercase;
+  border-radius:999px;
+  background: rgba(220,38,38,.15);
+  color:#fecaca;
+  margin-bottom:18px;
+}
+
 h1 {
   margin:0 0 16px;
-  font-size:32px;
-  color:#f87171;
+  font-size:34px;
+  color:#fca5a5;
 }
+
 p {
   font-size:16px;
-  line-height:1.65;
+  line-height:1.7;
   opacity:.9;
 }
+
 .footer {
   margin-top:26px;
   font-size:14px;
   opacity:.6;
 }
+
 .contact {
-  margin-top:14px;
+  margin-top:16px;
   font-size:14px;
   color:#fecaca;
 }
@@ -49,16 +84,18 @@ p {
 <body>
 
 <div class="card">
+  <div class="badge">AI · Unban · Public</div>
+
   <h1>ChatGPT RU Unban</h1>
 
   <p>
-    This website is intended to provide access to an AI-powered assistant
-    and demonstrate modern artificial intelligence technologies.
+    This project aims to provide access to an AI-powered assistant
+    while showcasing modern, open artificial intelligence technologies.
   </p>
 
   <p>
     The service is currently under development.
-    Additional features and improvements will be introduced over time.
+    New features and improvements will be gradually introduced.
   </p>
 
   <div class="footer">
@@ -67,7 +104,7 @@ p {
 
   <div class="contact">
     Need help completing or customizing the setup?
-    Feel free to reach out to me on Discord: <strong>xcv9</strong>
+    Contact me on Discord: <strong>xcv9</strong>
   </div>
 </div>
 
